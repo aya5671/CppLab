@@ -43,40 +43,33 @@ Menu::Menu()
     selected = 0;
 }
 
-void Menu::displayMenu()
-{
+void Menu::displayMenu(){
     clear();
     writeAt(8, 2, "MENU", Color::red);
 
-    if (selected == 0)
-    {
+    if (selected == 0){
         writeAt(8, 5, "->", Color::yellow);
         writeAt(12, 5, "New", Color::yellow);
     }
-    else
-    {
+    else{
         writeAt(8, 5, "  ", Color::white);
         writeAt(12, 5, "New", Color::white);
     }
 
-    if (selected == 1)
-    {
+    if (selected == 1){
         writeAt(8, 7, "->", Color::yellow);
         writeAt(12, 7, "Display", Color::yellow);
     }
-    else
-    {
+    else{
         writeAt(8, 7, "  ", Color::white);
         writeAt(12, 7, "Display", Color::white);
     }
 
-    if (selected == 2)
-    {
+    if (selected == 2){
         writeAt(8, 9, "->", Color::yellow);
         writeAt(12, 9, "Exit", Color::yellow);
     }
-    else
-    {
+    else{
         writeAt(8, 9, "  ", Color::white);
         writeAt(12, 9, "Exit", Color::white);
     }
@@ -126,7 +119,7 @@ void Menu::addEmployees()
 
         employees[count].setEmployee(name, age);
         count++;
-        cout << "Employee added!" << endl;
+        cout << "Employee added" << endl;
     }
 
 //esc
@@ -161,6 +154,7 @@ void Menu::displayEmployees(){
 
 void Menu::run(){
 
+    int selected = 0;
     char key1;
     char key2;
     char key3;
